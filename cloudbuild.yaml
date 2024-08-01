@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['run', 'deploy', 'app', '--image', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1', '--platform', 'managed', '--region', 'us-central1', '--allow-unauthenticated']
+
+images:
+  - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
+
