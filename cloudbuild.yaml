@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/rama17-05-2020/git-test', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/rama17-05-2020/git-test']
+
+images:
+  - 'gcr.io/rama17-05-2020/git-test'
