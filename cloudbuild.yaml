@@ -20,7 +20,7 @@ steps:
       - '--allow-unauthenticated' 
       - '--port'
       - '80'
-    serviceAccount: cloud-build@rama17-05-2020.iam.gserviceaccount.com
+    serviceAccount: compute-engine@rama17-05-2020.iam.gserviceaccount.com 
 
 images:
   - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag2'
