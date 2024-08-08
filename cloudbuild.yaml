@@ -19,12 +19,12 @@ steps:
       - 'managed'
       - '--allow-unauthenticated' # Optional: Allows unauthenticated access
       - '--port'
-      - '8080'                    # Optional: Specifies the port your application listens on
-
+      - '80'                    # Optional: Specifies the port your application listens on
+      serviceAccount: cloud-build@rama17-05-2020.iam.gserviceaccount.com
+                                                                     
 images:
   - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag2'
 
 options:
   logging: CLOUD_LOGGING_ONLY
 
-  serviceAccount: cloud-build@rama17-05-2020.iam.gserviceaccount.com
