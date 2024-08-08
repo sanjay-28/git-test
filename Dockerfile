@@ -20,6 +20,6 @@ RUN echo '<!DOCTYPE html>\
     <title>Welcome to Nginx</title>\
 </head>\
 <body>\
-    <h1>Welcome TeamComputers v3!</h1>\
+    <h1>Hello world it's perfect!!!</h1>\
 </body>\
 </html>' > /usr/share/nginx/html/index.html
