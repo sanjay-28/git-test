@@ -1,26 +1,20 @@
-name: Cloud Build CI/CD
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1', '.']
 
-on:
-  push:
-    branches:
-      - main
+  # Push the Docker image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1']
 
-jobs:
-  build:
-    runs-on: nginx-latest
+  # Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['run', 'deploy', 'app1', '--image', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1', '--region', 'us-central1', '--platform', 'managed']
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+images:
+  - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1'
 
-    - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-      with:
-        project_id: rama17-05-2020
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
+# Optional: Specify the logging bucket if you are using a custom service account
+# logs_bucket: 'gs://your-logs-bucket'
 
-    - name: Configure Docker
-      run: gcloud auth configure-docker us-central1-docker.pkg.dev
-
-    - name: Trigger Cloud Build
-      run: gcloud builds submit --config cloudbuild.yaml .
