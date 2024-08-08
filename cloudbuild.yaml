@@ -28,12 +28,5 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 
-  gcloud beta builds triggers create github \
-    --name="my-trigger" \
-    --repo-name="git-test" \
-    --repo-owner="sanjay-28" \
-    --branch-pattern="^main$" \
-    --build-config="cloudbuild.yaml" \
-    --service-account="cloud-build@rama17-05-2020.iam.gserviceaccount.com"
 
 
