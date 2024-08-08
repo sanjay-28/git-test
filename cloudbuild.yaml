@@ -1,14 +1,16 @@
 steps:
-name: 'gcr.io/cloud-builder/docker'
-  args:
-    - 'build'
-    - '-t'
-    - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
-    - '.'
-name: 'gcr.io/cloud-builder/gcloud'
-  args:
-    - 'run'
-    - 'deploy'
-    - 'sanjay-app'
-    - '--image'
-    - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
+  - name: 'gcr.io/cloud-builder/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
+      - '.'
+
+  - name: 'gcr.io/cloud-builder/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'sanjay-app'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
+
