@@ -1,5 +1,5 @@
 steps:
-  # Build the Docker image
+  # Build the Docker image-
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag2', '.']
 
