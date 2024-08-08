@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: nginix-latest
+    runs-on: nginx-latest
 
     steps:
     - name: Checkout code
