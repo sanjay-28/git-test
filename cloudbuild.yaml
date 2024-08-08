@@ -24,9 +24,6 @@ steps:
 images:
   - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag2'
 
-    options:
-    logging: CLOUD_LOGGING_ONLY
-
-
-
+options:
+  logging: CLOUD_LOGGING_ONLY
 
