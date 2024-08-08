@@ -1,20 +1,7 @@
 steps:
-  # Build the Docker image
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1', '.']
-
-  # Push the Docker image to Artifact Registry
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1']
-
-  # Deploy to Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'gcloud'
-    args: ['run', 'deploy', 'app1', '--image', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1', '--region', 'us-central1', '--platform', 'managed']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1', '.']
 
 images:
-  - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app1:tag1'
-
-# Optional: Specify the logging bucket if you are using a custom service account
-# logs_bucket: 'gs://your-logs-bucket'
+- 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/app:tag1'
 
