@@ -20,6 +20,6 @@ RUN echo '<!DOCTYPE html>\
     <title>Welcome to Nginx</title>\
 </head>\
 <body>\
-    <h1>It is testing for version 2 !!</h1>\
+    <h1>It is testing for version 3 !!</h1>\
 </body>\
 </html>' > /usr/share/nginx/html/index.html
