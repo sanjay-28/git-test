@@ -13,7 +13,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'app1'
+      - 'web-app'
       - '--image'
       - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/web-app:latest'
       - '--region'
