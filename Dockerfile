@@ -20,6 +20,6 @@ RUN echo '<!DOCTYPE html>\
     <title>Welcome to Nginx</title>\
 </head>\
 <body>\
-    <h1>Hello World Git-Hub In Action version 2.0!!</h1>\
+    <h1>Hello World CICD In Action version 1.0!!</h1>\
 </body>\
 </html>' > /usr/share/nginx/html/index.html
