@@ -11,10 +11,10 @@
 # hlsearch on (H) or off (h):
 ~H
 # Command Line History (newest to oldest):
+:q!
+|2,0,1733829069,,"q!"
 :wq!
 |2,0,1733828467,,"wq!"
-:q!
-|2,0,1733828143,,"q!"
 
 # Search String History (newest to oldest):
 
@@ -58,52 +58,84 @@
 
 # File marks:
 '0  32  7  ~/cloudbuild.yaml
-|4,48,32,7,1733828467,"~/cloudbuild.yaml"
-'1  32  7  ~/cloudbuild.yaml
-|4,49,32,7,1733828432,"~/cloudbuild.yaml"
-'2  1  8  ~/cloudbuild.yaml
-|4,50,1,8,1733828143,"~/cloudbuild.yaml"
-'3  27  8  ~/cloudbuild.yaml
-|4,51,27,8,1733828143,"~/cloudbuild.yaml"
-'4  1  8  ~/cloudbuild.yaml
-|4,52,1,8,1733828143,"~/cloudbuild.yaml"
-'5  27  8  ~/cloudbuild.yaml
-|4,53,27,8,1733828143,"~/cloudbuild.yaml"
-'6  1  28  ~/cloudbuild.yaml
-|4,54,1,28,1733828052,"~/cloudbuild.yaml"
-'7  1  28  ~/cloudbuild.yaml
-|4,55,1,28,1733828052,"~/cloudbuild.yaml"
-'8  1  28  ~/cloudbuild.yaml
-|4,56,1,28,1733828052,"~/cloudbuild.yaml"
-'9  33  28  ~/cloudbuild.yaml
-|4,57,33,28,1733828052,"~/cloudbuild.yaml"
+|4,48,32,7,1733829069,"~/cloudbuild.yaml"
+'1  1  0  ~/Dockerfile
+|4,49,1,0,1733828590,"~/Dockerfile"
+'2  32  7  ~/cloudbuild.yaml
+|4,50,32,7,1733828467,"~/cloudbuild.yaml"
+'3  32  7  ~/cloudbuild.yaml
+|4,51,32,7,1733828432,"~/cloudbuild.yaml"
+'4  32  7  ~/cloudbuild.yaml
+|4,52,32,7,1733828432,"~/cloudbuild.yaml"
+'5  1  8  ~/cloudbuild.yaml
+|4,53,1,8,1733828143,"~/cloudbuild.yaml"
+'6  27  8  ~/cloudbuild.yaml
+|4,54,27,8,1733828143,"~/cloudbuild.yaml"
+'7  1  8  ~/cloudbuild.yaml
+|4,55,1,8,1733828143,"~/cloudbuild.yaml"
+'8  27  8  ~/cloudbuild.yaml
+|4,56,27,8,1733828143,"~/cloudbuild.yaml"
+'9  1  8  ~/cloudbuild.yaml
+|4,57,1,8,1733828143,"~/cloudbuild.yaml"
 
 # Jumplist (newest first):
 -'  32  7  ~/cloudbuild.yaml
+|4,39,32,7,1733829069,"~/cloudbuild.yaml"
+-'  1  0  ~/Dockerfile
+|4,39,1,0,1733828590,"~/Dockerfile"
+-'  1  0  ~/Dockerfile
+|4,39,1,0,1733828590,"~/Dockerfile"
+-'  32  7  ~/cloudbuild.yaml
 |4,39,32,7,1733828467,"~/cloudbuild.yaml"
+-'  32  7  ~/cloudbuild.yaml
+|4,39,32,7,1733828467,"~/cloudbuild.yaml"
+-'  32  7  ~/cloudbuild.yaml
+|4,39,32,7,1733828432,"~/cloudbuild.yaml"
 -'  32  7  ~/cloudbuild.yaml
 |4,39,32,7,1733828432,"~/cloudbuild.yaml"
 -'  1  8  ~/cloudbuild.yaml
 |4,39,1,8,1733828144,"~/cloudbuild.yaml"
 -'  1  8  ~/cloudbuild.yaml
 |4,39,1,8,1733828144,"~/cloudbuild.yaml"
+-'  1  8  ~/cloudbuild.yaml
+|4,39,1,8,1733828144,"~/cloudbuild.yaml"
+-'  1  8  ~/cloudbuild.yaml
+|4,39,1,8,1733828144,"~/cloudbuild.yaml"
+-'  1  8  ~/cloudbuild.yaml
+|4,39,1,8,1733828144,"~/cloudbuild.yaml"
+-'  27  8  ~/cloudbuild.yaml
+|4,39,27,8,1733828143,"~/cloudbuild.yaml"
+-'  27  8  ~/cloudbuild.yaml
+|4,39,27,8,1733828143,"~/cloudbuild.yaml"
+-'  27  8  ~/cloudbuild.yaml
+|4,39,27,8,1733828143,"~/cloudbuild.yaml"
 -'  27  8  ~/cloudbuild.yaml
 |4,39,27,8,1733828143,"~/cloudbuild.yaml"
 -'  27  8  ~/cloudbuild.yaml
 |4,39,27,8,1733828143,"~/cloudbuild.yaml"
 -'  1  0  ~/cloudbuild.yaml
 |4,39,1,0,1733828105,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1733828105,"~/cloudbuild.yaml"
+-'  33  28  ~/cloudbuild.yaml
+|4,39,33,28,1733828052,"~/cloudbuild.yaml"
+-'  33  28  ~/cloudbuild.yaml
+|4,39,33,28,1733828052,"~/cloudbuild.yaml"
+-'  33  28  ~/cloudbuild.yaml
+|4,39,33,28,1733828052,"~/cloudbuild.yaml"
 -'  33  28  ~/cloudbuild.yaml
 |4,39,33,28,1733828052,"~/cloudbuild.yaml"
 -'  33  28  ~/cloudbuild.yaml
 |4,39,33,28,1733828052,"~/cloudbuild.yaml"
 -'  1  0  ~/cloudbuild.yaml
 |4,39,1,0,1733828015,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1733828015,"~/cloudbuild.yaml"
 
 # History of marks within files (newest to oldest):
 
 > ~/cloudbuild.yaml
-	*	1733828466	0
+	*	1733829068	0
 	"	32	7
 	^	32	8
 	.	27	54
@@ -112,3 +144,7 @@
 	+	1	6
 	+	33	28
 	+	27	54
+
+> ~/Dockerfile
+	*	1733828589	0
+	"	1	0
