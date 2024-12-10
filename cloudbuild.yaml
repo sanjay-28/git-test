@@ -1,11 +1,11 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/web-app:latest', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag2', '.']
 
   # Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/web-app:latest']
+    args: ['push', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag2']
 
   # Deploy to Cloud Run with specified service account
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -13,9 +13,9 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'web-app'
+      - 'app1'
       - '--image'
-      - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/web-app:latest'
+      - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag2'
       - '--region'
       - 'us-central1'
       - '--platform'
@@ -24,10 +24,10 @@ steps:
       - '--port'
       - '80'
       - '--service-account'
-      - 'cloud-build@rama17-05-2020.iam.gserviceaccount.com'  # Replace with your service account email
+      - 'cloud-build@ramakk-gcp.iam.gserviceaccount.com'  # Replace with your service account email
 
 images:
-  - 'us-central1-docker.pkg.dev/rama17-05-2020/sanjay-repo/web-app:latest'
+  - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag2'
 
 options:
   logging: CLOUD_LOGGING_ONLY
