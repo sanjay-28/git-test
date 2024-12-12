@@ -27,7 +27,7 @@ steps:
       - 'cloud-build@ramakk-gcp.iam.gserviceaccount.com'  # Replace with your service account email
 
 images:
-  - 'us-central1-docker.pkg.dev/ramakk-gcp/tf-repo/app1:tag2'
+  - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag2'
 
 options:
   logging: CLOUD_LOGGING_ONLY
