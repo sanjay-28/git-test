@@ -1,0 +1,34 @@
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/ramakk-gcp/tf-repo/tf-app:tag1', '.']
+
+  # Push the Docker image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/ramakk-gcp/tf-repo/tf-app:tag1']
+
+  # Deploy to Cloud Run with specified service account
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'tf-app'  # Cloud Run service name (used as the app name in GCP)
+      - '--image'
+      - 'us-central1-docker.pkg.dev/ramakk-gcp/tf-repo/tf-app:tag1'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'  # Allow public access to the Cloud Run service
+      - '--port'
+      - '80'
+      - '--service-account'
+      - 'cloud-build@ramakk-gcp.iam.gserviceaccount.com'  # Ensure this account has the right permissions
+
+images:
+  - 'us-central1-docker.pkg.dev/ramakk-gcp/tf-repo/tf-app:tag1'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
