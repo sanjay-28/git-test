@@ -1,11 +1,11 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag3', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag1', '.']
 
   # Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag3']
+    args: ['push', 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag1']
 
   # Deploy to Cloud Run with specified service account
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -15,7 +15,7 @@ steps:
       - 'deploy'
       - 'app1'
       - '--image'
-      - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag3'
+      - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag1'
       - '--region'
       - 'us-central1'
       - '--platform'
@@ -27,7 +27,7 @@ steps:
       - 'cloud-build@ramakk-gcp.iam.gserviceaccount.com'  # Replace with your service account email
 
 images:
-  - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag3'
+  - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/app1:tag1'
 
 options:
   logging: CLOUD_LOGGING_ONLY
