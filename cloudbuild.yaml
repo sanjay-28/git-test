@@ -13,7 +13,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'app1'
+      - 'dev-app'
       - '--image'
       - 'us-central1-docker.pkg.dev/ramakk-gcp/demo-repo/dev:tag1'
       - '--region'
